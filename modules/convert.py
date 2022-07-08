@@ -1,11 +1,11 @@
-import re, requests
+import re, requests, os
 from modules import util
 from modules.util import Failed
 from plexapi.exceptions import BadRequest
 
 logger = util.logger
 
-anime_lists_url = "https://raw.githubusercontent.com/Fribb/anime-lists/master/anime-list-full.json"
+anime_lists_url = os.environ['CONVERT_URL']
 
 class Convert:
     def __init__(self, config):
